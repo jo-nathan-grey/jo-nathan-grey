@@ -48,7 +48,7 @@ html {
 }
 
 .navbar {
-    background-color: #FF6F17;
+    background-color: #052f69;
 }
 
 .navLinks {
@@ -73,6 +73,15 @@ html {
 }
 
  .navLinks li:hover {
-    background-color: #370D01;
+    background-color: #FF6F17;
  }
-  
+
+#logoLayout {
+    width: 15%;
+    display: flex;
+    padding: 3rem;
+}
+
+#logo {
+    width: 100%;
+}
