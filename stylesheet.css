@@ -6,6 +6,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --cl1: white;
+  --cl2: #052f69;
+  --cl3: #ff6f17;
+  --f1: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --f2: Arial, Helvetica, sans-serif;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -20,7 +28,7 @@ html {
 }
 
 .navbar {
-  background-color: #052f69;
+  background-color: var(--cl2);
 }
 
 .navLinks {
@@ -32,8 +40,8 @@ html {
 .navLinks li a {
   font-size: 2.6rem;
   text-decoration: none;
-  color: white;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--cl1);
+  font-family: var(--f1);
   font-weight: 700;
   padding: 1rem;
 }
@@ -45,7 +53,7 @@ html {
 }
 
 .navLinks li:hover {
-  background-color: #ff6f17;
+  background-color: var(--cl3);
 }
 
 #logoLayout {
@@ -55,7 +63,7 @@ html {
   width: 15%;
   height: 33%;
   display: flex;
-  background-color: white;
+  background-color: var(--cl1);
   border-radius: 100%;
   justify-content: center;
   padding: 1.5rem;
@@ -66,19 +74,25 @@ html {
   width: 70%;
 }
 
-p,
-h2 {
-  color: #052f69;
+.whiteBack {
+  color: var(--cl2);
+  text-align: justify;
 }
 
 h2 {
-  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--f1);
   font-size: 4rem;
   padding: 3rem 4rem 3rem 4rem;
 }
 
+h3 {
+  font-family: var(--f1);
+  font-size: 3rem;
+  padding: 1rem 4rem 2rem 4rem;
+}
+
 p {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--f2);
   font-size: 2.4rem;
   padding: 0 4rem 2rem 4rem;
 }
@@ -86,5 +100,55 @@ p {
 .promo {
   float: right;
   width: 60%;
-  padding: 0 5rem 1rem 1rem;
+  padding: 1rem 4rem 2rem 4rem;
+}
+
+@media screen and (max-width: 768px) {
+  .promo {
+    width: 100%;
+  }
+
+  .cardLayout {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 95%;
+  }
+}
+
+.blueBack {
+  background-color: var(--cl2);
+}
+
+.blueBack {
+  color: var(--cl1);
+  text-align: center;
+}
+
+.card > h3 {
+  font-family: var(--f1);
+  font-size: 3rem;
+  padding: 3rem 4rem 1.5rem 4rem;
+}
+
+.cardLayout {
+  display: flex;
+  justify-content: space-around;
+  margin: 4rem 0;
+}
+
+.card {
+  width: 30%;
+  border-radius: 2rem;
+  transition: all ease 0.6s;
+}
+
+.card:hover {
+  background-color: var(--cl3);
+}
+
+.schoolImage {
+  float: left;
+  padding-top: 3rem;
 }
