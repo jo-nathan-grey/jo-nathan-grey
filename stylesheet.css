@@ -17,6 +17,15 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
 
 .bannerContainer {
@@ -139,3 +148,79 @@ p {
   float: left;
   padding-top: 3rem;
 }
+
+/*---------- forms ----------*/
+
+#forms {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cl3);
+}
+
+.form {
+  background-color: var(--cl2);
+  border-radius: 0.6rem;
+  max-width: 43rem;
+  width: 100%;
+  /* border: pink solid 0.5rem; */
+}
+
+.formContent {
+  width: 100%;
+  padding: 3rem;
+  color: var(--cl1);
+}
+.formContent h3 {
+  padding: 0 0 2rem;
+  text-align: center;
+}
+
+form .field {
+  height: 4.5rem;
+  width: 100%;
+  margin-top: 2rem;
+  /* border: purple solid 0.5rem; */
+}
+.field input,
+.field button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.field input {
+  padding: 0 1.5rem;
+  border: var(--cl3) solid 0.1rem;
+}
+.formLink {
+  text-align: center;
+  margin-top: 1rem;
+}
+.formLink span,
+.formLink a {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.form a {
+  text-decoration: none;
+  color: var(--cl3);
+}
+.form a:hover {
+  text-decoration: underline;
+}
+
+/*
+
+https://www.youtube.com/watch?v=ROqsYIVCJ5Y&t=342s
+
+12:00
+
+*/
