@@ -10,6 +10,7 @@
   --cl1: white;
   --cl2: #052f69;
   --cl3: #ff6f17;
+  --clfb: #4267b2;
   --f1: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --f2: Arial, Helvetica, sans-serif;
 }
@@ -151,7 +152,8 @@ p {
 
 /*---------- forms ----------*/
 
-#forms {
+#loginForm,
+#signupForm {
   height: 100%;
   width: 100%;
   display: flex;
@@ -166,12 +168,14 @@ p {
   border-radius: 0.6rem;
   max-width: 43rem;
   width: 100%;
+  padding: 3rem;
+  font-family: var(--f1);
+
   /* border: pink solid 0.5rem; */
 }
 
 .formContent {
   width: 100%;
-  padding: 3rem;
   color: var(--cl1);
 }
 .formContent h3 {
@@ -179,10 +183,12 @@ p {
   text-align: center;
 }
 
-form .field {
+.form .field {
   height: 4.5rem;
   width: 100%;
   margin-top: 2rem;
+  position: relative;
+  border-radius: 0.6rem;
   /* border: purple solid 0.5rem; */
 }
 .field input,
@@ -192,13 +198,30 @@ form .field {
   border: none;
   border-radius: 0.5rem;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .field input {
+  outline: none;
   padding: 0 1.5rem;
   border: var(--cl3) solid 0.1rem;
 }
+.field input:focus {
+  border-bottom-width: 0.2rem;
+}
+
+.field button {
+  background-color: var(--cl3);
+  color: var(--cl1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.field button:hover {
+  background-color: var(--cl1);
+  color: var(--cl2);
+}
+
 .formLink {
   text-align: center;
   margin-top: 1rem;
@@ -213,14 +236,97 @@ form .field {
   text-decoration: none;
   color: var(--cl3);
 }
-.form a:hover {
+.formContent a:hover {
   text-decoration: underline;
+}
+
+.fa-eye-slash {
+  font-size: 1.8rem;
+  color: #8b8b8b;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.line {
+  position: relative;
+  height: 0.1rem;
+  width: 100%;
+  margin: 3.5rem 0;
+  background-color: var(--cl3);
+  color: var(--cl1);
+}
+
+.line::before {
+  content: "Or";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 1.5rem;
+  background-color: var(--cl2);
+}
+
+.mediaOptions a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--f1);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+a.facebook {
+  color: var(--cl1);
+  background-color: var(--clfb);
+  padding: 2rem;
+}
+
+a.google {
+  color: var(--cl2);
+  background-color: var(--cl1);
+  padding: 2rem;
+}
+
+a.facebook .fa-facebook-f {
+  background-color: #fff;
+  color: var(--clfb);
+  height: 2.8rem;
+  width: 2.8rem;
+  font-size: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-facebook-f,
+img.googleImg {
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+}
+
+img.googleImg {
+  height: 2rem;
+  width: 2rem;
+  object-fit: cover;
+  background-color: var(--cl1);
+  height: 2.8rem;
+  width: 2.8rem;
+  border-radius: 50%;
+  padding: 0.3rem;
+  /* border: 0.1rem solid var(--cl2); */
 }
 
 /*
 
 https://www.youtube.com/watch?v=ROqsYIVCJ5Y&t=342s
 
-12:00
+23:00
 
 */
