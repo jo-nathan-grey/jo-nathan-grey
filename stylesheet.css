@@ -8,8 +8,9 @@
 
 :root {
   --cl1: white;
-  --cl2: #052f69;
-  --cl3: #ff6f17;
+  --cl2: #173f5f;
+  --cl3: #ed553b;
+  --cl4: #3caea3;
   --clfb: #4267b2;
   --f1: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --f2: Arial, Helvetica, sans-serif;
@@ -150,28 +151,45 @@ p {
   padding-top: 3rem;
 }
 
-/*---------- forms ----------*/
+/*---------------------------- forms ----------------------------*/
 
-#loginForm,
-#signupForm {
-  height: 100%;
+.forms .form {
+  transition: all 1s ease;
+}
+
+.container {
+  height: 100vh;
   width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--cl3);
+  background-color: var(--cl4);
+  column-gap: 3rem;
 }
 
 .form {
+  position: absolute;
   background-color: var(--cl2);
   border-radius: 0.6rem;
   max-width: 43rem;
   width: 100%;
   padding: 3rem;
   font-family: var(--f1);
+}
 
-  /* border: pink solid 0.5rem; */
+.form.signup {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.forms.showSignup .form.signup {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.forms.showSignup .form.login {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .formContent {
@@ -189,8 +207,8 @@ p {
   margin-top: 2rem;
   position: relative;
   border-radius: 0.6rem;
-  /* border: purple solid 0.5rem; */
 }
+
 .field input,
 .field button {
   height: 100%;
@@ -218,7 +236,7 @@ p {
 }
 
 .field button:hover {
-  background-color: var(--cl1);
+  background-color: var(--cl4);
   color: var(--cl2);
 }
 
@@ -234,13 +252,14 @@ p {
 
 .form a {
   text-decoration: none;
-  color: var(--cl3);
+  color: var(--cl4);
 }
 .formContent a:hover {
   text-decoration: underline;
 }
 
-.fa-eye-slash {
+.fa-eye-slash,
+.fa-eye {
   font-size: 1.8rem;
   color: #8b8b8b;
   position: absolute;
@@ -253,10 +272,10 @@ p {
 
 .line {
   position: relative;
-  height: 0.1rem;
+  height: 0.2rem;
   width: 100%;
   margin: 3.5rem 0;
-  background-color: var(--cl3);
+  background-color: var(--cl4);
   color: var(--cl1);
 }
 
