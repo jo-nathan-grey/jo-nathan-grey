@@ -1,6 +1,6 @@
 *,
-::before,
-::after {
+*::before,
+*::after {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -83,9 +83,9 @@ body {
   height: auto;
 }
 
-section {
+/* section {
   padding: 0 2.5rem;
-}
+} */
 
 .whiteBack {
   color: var(--cl2);
@@ -154,7 +154,7 @@ p {
   padding-top: 3rem;
 }
 
-@media screen and (max-width:850px) {
+@media screen and (max-width: 850px) {
   .promo {
     width: 100%;
   }
@@ -358,3 +358,74 @@ https://www.youtube.com/watch?v=ROqsYIVCJ5Y&t=342s
 23:00
 
 */
+
+/*------------slideshow------------*/
+
+.carousel {
+  width: 100vw;
+  height: calc(100vh - 5.6rem);
+  position: relative;
+  /* border: 0.2rem solid green; */
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 0.5s opacity ease-in-out;
+  transition-delay: 0.5s;
+  /* border: 0.2rem solid red; */
+}
+
+.slide[data-active] {
+  opacity: 1;
+  transition-delay: 0s;
+  z-index: 1;
+  /* border: 0.2rem solid yellow; */
+}
+
+.slide > img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.carousel-button {
+  position: absolute;
+  background: none;
+  border: none;
+  font-size: 6rem;
+  top: 50%;
+  z-index: 5;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  border-radius: 0.5rem;
+  padding: 0 2.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button:focus {
+  outline: 0.1rem solid black;
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+.carousel-button.next {
+  right: 1rem;
+}
