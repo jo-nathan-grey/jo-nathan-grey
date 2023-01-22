@@ -92,6 +92,12 @@ section {
   text-align: justify;
 }
 
+h1 {
+  font-family: var(--f1);
+  font-size: 5rem;
+  padding: 3rem 4rem 3rem 4rem;
+}
+
 h2 {
   font-family: var(--f1);
   font-size: 4rem;
@@ -358,3 +364,37 @@ https://www.youtube.com/watch?v=ROqsYIVCJ5Y&t=342s
 23:00
 
 */
+
+/*------------lightbox---------------*/
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.grid img {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+#lightbox {
+position: fixed;
+z-index: 1000;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(23, 63, 95, .8);
+display: none;
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
