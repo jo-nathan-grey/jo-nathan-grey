@@ -30,7 +30,6 @@ links.forEach((link) => {
 });
 
 const buttons = document.querySelectorAll("[data-carousel-button]");
-console.log(buttons);
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -47,5 +46,28 @@ buttons.forEach((button) => {
 
     slides.children[newIndex].dataset.active = true;
     delete activeSlide.dataset.active;
+
+    console.log(newIndex);
   });
 });
+
+const dropdown = document.getElementsByClassName("dropdown-btn");
+let i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    let dropdownContent = this.nextElementSibling;
+    console.log(dropdownContent);
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+// const slideLinks = document.getElementsByClassName("slide");
+// let currentSlide = slideLinks.querySelector("[data-active]");
+
+// console.log(currentSlide);

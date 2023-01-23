@@ -362,7 +362,7 @@ https://www.youtube.com/watch?v=ROqsYIVCJ5Y&t=342s
 /*------------slideshow------------*/
 
 .carousel {
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 5.6rem);
   position: relative;
   /* border: 0.2rem solid green; */
@@ -428,4 +428,63 @@ https://www.youtube.com/watch?v=ROqsYIVCJ5Y&t=342s
 }
 .carousel-button.next {
   right: 1rem;
+}
+
+/*--------------sidenav------------------*/
+
+#testQuest {
+  display: flex;
+  font-family: var(--f1);
+  font-size: 1.6rem;
+  color: #173f5f;
+}
+
+.sidenav {
+  height: 100vh;
+  z-index: 100;
+}
+
+.sidenav a,
+.dropdown-btn {
+  display: block;
+
+  text-decoration: none;
+  border: none;
+  background: none;
+  outline: none;
+
+  height: 6rem;
+  width: 100%;
+
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: var(--cl2);
+  line-height: 6rem;
+}
+
+/* .sidenav a {
+  display: none;
+} */
+
+.sidenav a:hover,
+.dropdown-btn:hover {
+  color: var(--cl3);
+  background-color: var(--cl4);
+}
+
+.active {
+  background-color: var(--cl4);
+  color: white;
+}
+
+.dropdown-cont {
+  display: none;
+  /* padding-left: 8px; */
+}
+
+.fa-caret-down {
+  float: right;
+  padding: 2rem;
+  margin-left: -4.5rem;
 }
