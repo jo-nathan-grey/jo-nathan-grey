@@ -2,8 +2,6 @@ const forms = document.querySelector(".forms"),
   pwShowHide = document.querySelectorAll(".fa-eye-slash"),
   links = document.querySelectorAll(".link");
 
-console.log(forms, pwShowHide, links);
-
 pwShowHide.forEach((eyeIcon) => {
   eyeIcon.addEventListener("click", () => {
     let pwFields =
@@ -40,14 +38,12 @@ buttons.forEach((button) => {
 
     const activeSlide = slides.querySelector("[data-active]");
     let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-    console.log(newIndex);
+
     if (newIndex < 0) newIndex = slides.children.length - 1;
     if (newIndex >= slides.children.length) newIndex = 0;
 
     slides.children[newIndex].dataset.active = true;
     delete activeSlide.dataset.active;
-
-    console.log(newIndex);
   });
 });
 
@@ -58,7 +54,6 @@ for (i = 0; i < dropdown.length; i++) {
   dropdown[i].addEventListener("click", function () {
     this.classList.toggle("active");
     let dropdownContent = this.nextElementSibling;
-    console.log(dropdownContent);
     if (dropdownContent.style.display === "block") {
       dropdownContent.style.display = "none";
     } else {
@@ -66,8 +61,3 @@ for (i = 0; i < dropdown.length; i++) {
     }
   });
 }
-
-// const slideLinks = document.getElementsByClassName("slide");
-// let currentSlide = slideLinks.querySelector("[data-active]");
-
-// console.log(currentSlide);
